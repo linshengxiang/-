@@ -1,0 +1,26 @@
+Dim k As Boolean
+Dim a as Integer
+
+Private Sub Command1_Click()
+k = False
+While k = False
+    Timer1.Enabled = True
+    Randomize
+
+    a = Int(Rnd * Text2.Text + 1)
+
+    Label3.Caption = a
+
+    DoEvents
+wend
+Text1.Text = Label3.Caption
+End Sub
+
+Private Sub Command2_Click()
+k = True
+Timer1.Enabled = False
+End Sub
+
+Private Sub Command3_Click()
+End
+End Sub

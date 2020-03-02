@@ -1,0 +1,26 @@
+Dim k As Boolean
+Private Sub Command1_Click()
+k = False
+Do While k = False
+    Timer1.Enabled = True
+    Randomize
+    
+    cheat.Caption = Int(Rnd * Text2.Text + 1)
+    
+    If cheat.Caption <> 3 And cheat.Caption <> 19 And cheat.Caption <> 6 Then
+        Label3.Caption = cheat.Caption
+    End If
+    DoEvents
+Loop
+Text1.Text = Label3.Caption
+End Sub
+Private Sub Command2_Click()
+k = True
+Timer1.Enabled = False
+End Sub
+
+Private Sub Command3_Click()
+End
+End Sub
+
+
